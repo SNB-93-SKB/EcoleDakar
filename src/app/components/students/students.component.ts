@@ -30,6 +30,13 @@ export class StudentsComponent implements OnInit{
   
   handleCheckStudent(student:any){
 console.log(student);
+this.http.patch<any>(`http://localhost:4000/students/${student.id}`,
+{ checked:!student.checked}).subscribe({
+  next:updateStudent=>{
 student.checked=!student.checked;
+  }
+})
+
+
   }
 }
