@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Student } from 'src/app/model/student.model';
 import { StudentService } from 'src/app/services/student.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class StudentsComponent implements OnInit{
  
-  students:Array<any>=[];
+  students:Array<Student>=[];
 
   constructor(private studentService:StudentService){
   
@@ -30,7 +31,7 @@ export class StudentsComponent implements OnInit{
           }
         } )
   }
-  handleCheckStudent(student :any){
+  handleCheckStudent(student :Student){
 console.log(student);
 this.studentService.checkStudent(student).subscribe( {
   next:updateStudent =>{

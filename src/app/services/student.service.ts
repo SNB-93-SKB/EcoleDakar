@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Student } from '../model/student.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +13,12 @@ export class StudentService {
   }
 
 
-  public getStudents():Observable<any>{
-return this.http.get<Array<any>>("http://localhost:4000/students");
+  public getStudents():Observable<Array<Student>>{
+return this.http.get<Array<Student>>("http://localhost:4000/students");
   }
 
-  public checkStudent(student:any):Observable<any>{
-    return this.http.patch<any>(`http://localhost:4000/students/${student.id}`,
+  public checkStudent(student:Student):Observable<any>{
+    return this.http.patch<Student>(`http://localhost:4000/students/${student.id}`,
     {checked:!student.checked});
       }
 }
