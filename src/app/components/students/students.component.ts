@@ -40,5 +40,13 @@ student.checked=!student.checked;
   }
 });
   }
-
+  handleDelete(student:Student){
+    if(confirm("êtes vous sur"))
+this.studentService.deleteStudent(student).subscribe({
+  next :data=>{
+    //this.getStudents();
+    this.students=this.students.filter(s=>s.id!=student.id)
+  }
+})
+  }
 }

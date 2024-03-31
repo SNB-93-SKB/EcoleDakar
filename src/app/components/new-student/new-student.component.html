@@ -1,7 +1,30 @@
 <div class="p-3">
     <div class="card">
-        <div class="card-body">
-            <h1>New-Student Component</h1>
+        <div class="card-body " style="">
+            <div class="row">
+                <div class="col-md-6">
+                    {{studentForm.value | json}}
+                    <form [formGroup]="studentForm" (ngSubmit)="saveStudent()">
+                 <div class="mb-3">
+                    <label class="form-label">FirstName</label>
+                    <input class="form-control" formControlName="firstname">
+                 </div>
+                 <div class="mb-3">
+                    <label class="form-label">LastName</label>
+                    <input class="form-control" formControlName="lastname">
+                 </div>
+                 <div class="mb-3">
+                    <label class="form-label">Classe</label>
+                    <input class="form-control" formControlName="classe">
+                 </div>
+                 <div class="mb-3">
+                    <label class="form-label">Checked</label>
+                    <input type="checkbox"class="form-check-input" formControlName="checked">
+                 </div>
+                 <button class="btn btn-outline-success">save</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     </div>

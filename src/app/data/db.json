@@ -5,11 +5,10 @@
       "firstname": "seny",
       "lastname": "balde",
       "classe": "L1a",
-      "checked": true
+      "checked": false
     },
     {
       "id": "2",
-      "name": "L2b",
       "firstname": "sana",
       "lastname": "balde",
       "classe": "L1a",
@@ -17,20 +16,20 @@
     },
     {
       "id": "3",
-      "name": "S1",
-      "firstname": "kadiatou",
+      "firstname": "Kadiatou",
       "lastname": "balde",
       "classe": "S2",
       "checked": true
-    },
+    }
+    ,
     {
       "id": "4",
-      "name": "S2",
-      "firstname": "yero",
+      "firstname": "Kadiatou",
       "lastname": "balde",
       "classe": "S1",
-      "checked": false
+      "checked": true
     }
+    
   ],
   "classes": [
     {
