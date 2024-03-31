@@ -24,6 +24,13 @@ ngOnInit(): void {
 }
 saveStudent(){
 let student:Student=this.studentForm.value;
-this.studentService.saveStudent(student)
+this.studentService.saveStudent(student).subscribe({
+  next:data=> {
+    alert(JSON.stringify(data));  
+  },
+  error:err=>{
+    console.log(err)
+  }
+})
 }
 }

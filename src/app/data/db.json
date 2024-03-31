@@ -20,16 +20,21 @@
       "lastname": "balde",
       "classe": "S2",
       "checked": true
-    }
-    ,
+    },
     {
       "id": "4",
       "firstname": "Kadiatou",
       "lastname": "balde",
       "classe": "S1",
       "checked": true
+    },
+    {
+      "id": "b669",
+      "firstname": "Arame Bakar",
+      "lastname": "Seck",
+      "classe": "S2",
+      "checked": false
     }
-    
   ],
   "classes": [
     {
