@@ -13,7 +13,7 @@
       "firstname": "sana",
       "lastname": "balde",
       "classe": "L1a",
-      "checked": false
+      "checked": true
     },
     {
       "id": "3",
@@ -29,7 +29,7 @@
       "firstname": "yero",
       "lastname": "balde",
       "classe": "S1",
-      "checked": true
+      "checked": false
     }
   ],
   "classes": [

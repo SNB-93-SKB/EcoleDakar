@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from 'src/app/services/student.service';
 
 @Component({
   selector: 'app-students',
@@ -10,33 +11,33 @@ export class StudentsComponent implements OnInit{
  
   students:Array<any>=[];
 
-  constructor(private http:HttpClient){
-  this.http=http;
+  constructor(private studentService:StudentService){
+  
   }
 
 
   ngOnInit(): void {
-      this.http.get<Array<any>>("http://localhost:4000/students").
-      subscribe({
-        next:data =>{
-          this.students=data
-        } ,
-        error:err=>{
-          console.log(err)
-        }
-      } )
-      
+      this.getStudents();
   }
-  
-  handleCheckStudent(student:any){
+  getStudents(){
+    this.studentService.getStudents().
+        subscribe({
+          next:data =>{
+            this.students=data
+          } ,
+          error:err=>{
+            console.log(err)
+          }
+        } )
+  }
+  handleCheckStudent(student :any){
 console.log(student);
-this.http.patch<any>(`http://localhost:4000/students/${student.id}`,
-{ checked:!student.checked}).subscribe({
-  next:updateStudent=>{
+this.studentService.checkStudent(student).subscribe( {
+  next:updateStudent =>{
 student.checked=!student.checked;
+//this.getStudents();
   }
-})
-
-
+});
   }
+
 }
