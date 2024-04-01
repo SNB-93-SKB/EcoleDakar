@@ -7,7 +7,11 @@
 
                 <thead>
                     <tr>
-                        <th>FirstName</th><th>LastName</th><th>Classe</th><th>Checked</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Classe</th>
+                        <th>Checked</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -15,6 +19,7 @@
                         <td>{{student.firstname}}</td>
                         <td>{{student.lastname}}</td>
                         <td>{{student.classe}}</td>
+
                         <td>
                             <button (click)="handleCheckStudent(student)" class="btn btn-outline-success">
                                 <i [class]="student.checked? 'bi bi-check':'bi bi-circle'"></i>
@@ -23,6 +28,11 @@
                         <td>
                             <button (click)="handleDelete(student)" class=" btn btn-outline-danger">
                                 <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button class=" btn btn-outline-warning"(click)="editStudent(student)">
+                       <i class="bi bi-pencil"></i>
                             </button>
                         </td>
                     </tr>

@@ -21,10 +21,12 @@
                     <label class="form-label">Checked</label>
                     <input type="checkbox"class="form-check-input" formControlName="checked">
                  </div>
-                 <button class="btn btn-outline-success">save</button>
+                 <button [disabled]="studentForm.invalid" class="btn btn-outline-success">save</button>
                     </form>
                 </div>
+                
             </div>
         </div>
+        
     </div>
     </div>

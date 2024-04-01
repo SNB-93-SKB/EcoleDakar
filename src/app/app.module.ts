@@ -9,6 +9,7 @@ import { NewStudentComponent } from './components/new-student/new-student.compon
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditStudentComponent } from './components/edit-student/edit-student.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     StudentsComponent,
     ClassesComponent,
     NewStudentComponent,
-    HomeComponent
+    HomeComponent,
+    EditStudentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Student } from 'src/app/model/student.model';
 import { StudentService } from 'src/app/services/student.service';
 
@@ -16,7 +16,7 @@ constructor(private fb:FormBuilder, private studentService:StudentService){
 }
 ngOnInit(): void {
    this.studentForm=this.fb.group({
-    firstname:this.fb.control(''),
+    firstname:this.fb.control('',[Validators.required]),
     lastname:this.fb.control(''),
     classe:this.fb.control(''),
     checked:this.fb.control(false),
@@ -33,4 +33,5 @@ this.studentService.saveStudent(student).subscribe({
   }
 })
 }
+
 }

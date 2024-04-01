@@ -49,4 +49,7 @@ this.studentService.deleteStudent(student).subscribe({
   }
 })
   }
+  editStudent(student:Student){
+    console.log(student);
+      }
 }
