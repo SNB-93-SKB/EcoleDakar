@@ -1,0 +1,7 @@
+.center{
+    display: flex;
+    justify-content: center; /* centre l'image horizontalement */
+    align-items: center; /* centre l'image verticalement */
+    width: 100%;
+    height: 100%;
+}

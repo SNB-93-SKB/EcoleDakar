@@ -31,7 +31,7 @@ this.studentService.saveStudent(student).subscribe({
   error:err=>{
     console.log(err)
   }
-})
+});
 }
 
 }

@@ -25,7 +25,11 @@ return this.http.get<Array<Student>>("http://localhost:4000/students");
       public deleteStudent(student:Student){
         return this.http.delete<any>(`http://localhost:4000/students/${student.id}`);
           }
-          saveStudent(student:Student):Observable<Student>{
+         public saveStudent(student:Student):Observable<Student>{
             return this.http.post<Student>(`http://localhost:4000/students`,student);
           }
+public updateStudent(student:Student):Observable<Student>{
+
+return this.http.put<any>(`http://localhost:4000/students/${student.id}`,student);
+}
 }
