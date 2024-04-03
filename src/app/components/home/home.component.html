@@ -3,9 +3,11 @@
         <div class="card-body">
             <h1 style="text-align: center;">BIENVENUE CHEZ MON ECOLE</h1>
 
-            <div class="center">
-                <img src="assets/img/ecol.jpg" alt="">
-            </div>
+            <carousel [interval]="2000"  class="center">
+                <slide *ngFor="let image of images">
+                  <img [src]="image.src" [alt]="image.alt">
+                </slide>
+              </carousel>
         </div>
         
     </div>
